@@ -1,3 +1,28 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "compilerOptions": {
+    "rootDir":".",
+    "module": "commonjs",
+    "lib": ["es6"],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "skipLibCheck": true,
+    "jsx": "react-native",
+    "noEmit": true,
+    "types": [],
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", "lib", "typedoc-plugin"],
+  "typedocOptions": {
+    "exclude": ["**/!(node_modules|@types)/*/index.d.ts"],
+    "entryPointStrategy": "expand",
+    "out": "typedoc-docs/docs",
+    "hideGenerator": "true",
+    "plugin": "./typedoc-plugin/index.js",
+    "customCss": "./typedoc-plugin/docs.style.css",
+    "theme": "CustomTheme"
+  }
 }
