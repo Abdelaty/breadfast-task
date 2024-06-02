@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {View, FlatList, ActivityIndicator} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {RootState} from '../../store/reducers';
-import PostCard from '../../components/PostCard';
+import PostCard from '../../components/PostCard/PostCard';
 import {fetchPosts} from '../../store/actions/postActions';
 import styles from './HomeScreen.styles';
 import store from '../../store/store';

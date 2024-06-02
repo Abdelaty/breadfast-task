@@ -1,22 +1,6 @@
-import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
-import {Comment} from '../models/Comments';
+import {StyleSheet} from 'react-native';
 
-interface Props {
-  comment: Comment;
-}
-
-const CommentCard: React.FC<Props> = ({comment}) => (
-  <View style={styles.container}>
-    <Image source={{uri: comment?.userAvatar}} style={styles.avatar} />
-    <View style={styles.content}>
-      <Text style={styles.userName}>{comment.name}</Text>
-      <Text style={styles.commentContent}>{comment.body}</Text>
-    </View>
-  </View>
-);
-
-const styles = StyleSheet.create({
+export default StyleSheet.create<any>({
   container: {
     flexDirection: 'row',
     padding: 16,
@@ -55,5 +39,3 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 });
-
-export default CommentCard;
